@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madeira Empório</title>
+  <link rel="stylesheet" href="./css/mais-vendidos.css">
+</head>
+<body>
+
+  <header class="topo">
+    <a href="https://madeira-emporio.github.io/br"><img src="https://i.postimg.cc/ZKvnf1hK/logo.png" alt="Logo" class="logo"></a>
+  </header>
+
+  <main class="container">
+    <section class="galeria">
+      <img src="https://i.postimg.cc/NM6sB3FT/IMG-20250518-010824.jpg" alt="Produto Principal" class="principal">
+      <div class="miniaturas">
+        <img src="https://i.postimg.cc/MpgqR6jV/IMG-20250518-010833.jpg" alt="Miniatura 1">
+        <img src="https://i.postimg.cc/zvd1f8rL/IMG-20250518-010843.jpg" alt="Miniatura 2">
+        <img src="https://i.postimg.cc/NM6sB3FT/IMG-20250518-010824.jpg" alt="Miniatura 3">
+      </div>
+    </section>
+
+    <section class="detalhes">
+
+      <span style="margin-left: 1px; background-color: #222121; color: white; font-weight: bold; font-size: 10px; padding: 4px 8px; border-radius: 4px;">
+    MAIS VENDIDO
+  </span><br><br>
+  <h1 style="font-size: 28px; font-weight: bold; margin-bottom: 10px;">
+    Faca em Aço Inox com detalhe de Folha na Lâmina - cabo Resinado
+  </h1>
+
+  <div style="display: flex; align-items: center; margin-bottom: 10px;">
+  <p class="preco" style="font-size: 24px; color: #222121; font-weight: bold; margin: 0;">
+    R$ 479,00
+  </p>
+  <span style="margin-left: 10px; background-color: #6e0604; color: white; font-weight: bold; font-size: 14px; padding: 4px 8px; border-radius: 4px;">
+    -33%
+  </span>
+</div>
+
+<p class="parcelamento" style="display: flex; align-items: center; font-size: 16px; color: #222121; margin-bottom: 20px;">
+  <img src="https://cdn-icons-png.flaticon.com/512/15/15997.png" alt="Cartão de crédito" style="width: 24px; height: 24px; margin-right: 8px;">
+  Ou em até 12x no cartão
+</p>
+
+
+  <ul class="info">
+    <li>Lâmina: 10" em aço inox</li>
+    <li>Cabo: Madeira nobre</li>
+    <li>Personalizada</li>
+  </ul>
+
+  <a href="https://wa.me/5547997553696" class="botao-whats" target="_blank">Comprar pelo WhatsApp</a>
+</section>
+
+  </main>
+
+  <script>
+    const principal = document.querySelector('.principal');
+    const miniaturas = document.querySelectorAll('.miniaturas img');
+
+    miniaturas.forEach(mini => {
+      mini.addEventListener('click', () => {
+        principal.src = mini.src;
+        principal.alt = mini.alt;
+      });
+    });
+  </script>
+
+
+
+
+
+
+<!-- Rodapé de Recomendados -->
+<section class="recomendados">
+  <h2>Recomendados</h2>
+  <div class="slider-container">
+    <button class="prev">&#10094;</button>
+    <div class="slider">
+
+      <a href="produto-6.html" class="produto-link">
+        <div class="produto">
+          <img src="https://i.postimg.cc/hGG6NTxV/IMG-20250517-151048.jpg" alt="Faca Artesanal" class="produto-img">
+          <div style="text-align: center; margin-top: 10px;">
+            <span style="background-color: #eb2f2f; color: white; font-weight: bold; font-size: 13px; padding: 5px 10px; border-radius: 5px;">
+              Promoção
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <a href="produto-7.html" class="produto-link">
+        <div class="produto">
+          <img src="https://i.postimg.cc/zBsgcZMg/IMG-20250518-010452.jpg" alt="Faca Luxo" class="produto-img">
+          <div style="text-align: center; margin-top: 10px;">
+            <span style="background-color: #eb2f2f; color: white; font-weight: bold; font-size: 13px; padding: 5px 10px; border-radius: 5px;">
+              Promoção
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <a href="produto-8.html" class="produto-link">
+        <div class="produto">
+          <img src="https://i.postimg.cc/NM6sB3FT/IMG-20250518-010824.jpg" alt="Melhor Faca" class="produto-img">
+          <div style="text-align: center; margin-top: 10px;">
+            <span style="background-color: #eb2f2f; color: white; font-weight: bold; font-size: 13px; padding: 5px 10px; border-radius: 5px;">
+              Promoção
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <a href="produto-9.html" class="produto-link">
+        <div class="produto">
+          <img src="https://i.postimg.cc/jdW1fz63/IMG-20250518-011117.jpg" alt="Time Faca" class="produto-img">
+          <div style="text-align: center; margin-top: 10px;">
+            <span style="background-color: #eb2f2f; color: white; font-weight: bold; font-size: 13px; padding: 5px 10px; border-radius: 5px;">
+              Promoção
+            </span>
+          </div>
+        </div>
+      </a>
+
+
+
+    </div>
+    <button class="next">&#10095;</button>
+  </div>
+</section>
+
+
+
+
+
+<script>
+  const slider = document.querySelector('.recomendados .slider');
+  const prevBtn = document.querySelector('.recomendados .prev');
+  const nextBtn = document.querySelector('.recomendados .next');
+
+  const scrollAmount = 200; // Quantos pixels o slider se move por clique
+
+  nextBtn.addEventListener('click', () => {
+    slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+
+  prevBtn.addEventListener('click', () => {
+    slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+</script>
+
+
+
+
+
+</body>
+</html>
